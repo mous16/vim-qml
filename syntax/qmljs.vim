@@ -17,7 +17,7 @@ if !exists("main_syntax")
   elseif exists("b:current_syntax")
     finish
   endif
-  let main_syntax = 'qml'
+  let main_syntax = 'qmljs'
 endif
 
 " Drop fold if it set but vim doesn't support it.
@@ -1085,7 +1085,7 @@ endif
 syn sync fromstart
 syn sync maxlines=100
 
-if main_syntax == "qml"
+if main_syntax == "qmljs"
   syn sync ccomment qmlComment
 endif
 
@@ -1139,7 +1139,7 @@ if version >= 508 || !exists("did_qml_syn_inits")
   delcommand HiLink
 endif
 
-let b:current_syntax = "qml"
-if main_syntax == 'qml'
+let b:current_syntax = "qmljs"
+if main_syntax == 'qmljs'
   unlet main_syntax
 endif
